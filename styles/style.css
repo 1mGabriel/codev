@@ -1,0 +1,1730 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar{
+  background-color: #000000;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #c41d1d;
+}
+header{
+  position: fixed;
+  background-color: #000;
+  z-index: 1;
+}
+#submenu-container{
+  display: none;
+  background-color: #1a1919;
+  z-index: 1;
+}
+#hide{
+  display: none;
+}
+.error{
+  color: #8F1F1F;
+  font-family: "lexend zetta";
+  font-size: 10px;
+}
+.form-container input,
+.form-container textarea{
+  color: #515151;
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+    background-color: #000;
+  }
+  header {
+    height: 52px;
+    width: 100%;
+  }
+  nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  nav img {
+    height: 19px;
+    width: 100px;
+  }
+  .submenu-container {
+    width: 100%;
+    height: 35px;
+  }
+  .submenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .submenu a {
+    text-transform: uppercase;
+    transition: 0.4s;
+    display: flex;
+    align-items: end;
+    font-size: 8px;
+    height: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Lexend Zetta";
+    border-bottom: 2px solid transparent;
+  }
+  .submenu a:hover {
+    border-bottom: 2px solid #8F1F1F;
+  }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 165px;
+    background-image: url("/images/banner.png");
+    background-size: cover;
+  }
+  .banner-container img {
+    height: 50px;
+    width: 250px;
+  }
+  .banner-container h2 {
+    font-size: 11px;
+    text-align: start;
+    font-family: "jura";
+    color: #fff;
+  }
+  .trilhas-container {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .trilhas h2,
+  .trilhas p {
+    color: #fff;
+    text-align: center;
+  }
+  .trilhas h2 {
+    font-family: "Lexend Zetta";
+    font-size: 12px;
+  }
+  .trilhas p {
+    font-family: "Jura";
+    font-size: 12px;
+    color: #d2d2d2;
+  }
+  .trilhas img {
+    height: 60px;
+    width: 60px;
+  }
+  .trilhas {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  .linguagens {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0px;
+  }
+  .linguagens img {
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .linguagens img:hover {
+    height: 65px;
+    width: 65px;
+  }
+  .html-description,
+  .css-description,
+  .js-description {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .html-description {
+    padding-top: 20px;
+    display: none;
+    padding-bottom: 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 67, 0, 1) 100%
+    );
+  }
+  .css-description {
+    padding-top: 20px;
+    display: none;
+    padding-bottom: 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(13, 46, 119) 100%
+    );
+  }
+  .js-description {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(236, 195, 11) 100%
+    );
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .row h2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "jura";
+  }
+  .html-description li {
+    font-weight: bold;
+    font-size: 13px;
+    font-family: "jura";
+    list-style: none;
+    margin-left: 10px;
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 255, 255),
+      rgb(196, 115, 40),
+      rgb(243, 57, 0)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+  .css-description li {
+    font-weight: bold;
+    font-size: 13px;
+    font-family: "jura";
+    list-style: none;
+    margin-left: 10px;
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 255, 255),
+      rgb(32, 110, 212),
+      #0772ff
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+  .js-description li {
+    font-weight: bold;
+    font-size: 13px;
+    font-family: "jura";
+    list-style: none;
+    margin-left: 10px;
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0),
+      rgb(0, 0, 0),
+      #000000
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+  .sobre-contaiener {
+    width: 100%;
+  }
+  .sobre {
+    padding-top: 10px;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .sobre p {
+    margin: 15px auto;
+    font-size: 12px;
+    font-family: "jura";
+    width: 100%;
+    color: #fff;
+  }
+  .sobre span {
+    background-image: linear-gradient(
+      to right,
+      rgb(146, 12, 12),
+      rgb(151, 60, 57),
+      #1e6c72
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+  .sobre img{
+    width: 80%;
+  }
+  .progress-container {
+    width: 100%;
+  }
+  .progress {
+    font-size: 10px;
+    font-family: "jura";
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .progress span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #8f1f1f 100%);
+  }
+  .step {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  .progress-1 .step p {
+    text-align: start;
+  }
+  .progress-2 .step p {
+    text-align: end;
+  }
+  .curriculum-container {
+    width: 100%;
+  }
+  .curriculum {
+    color: #fff;
+    font-family: "Lexend Zetta";
+    font-size: 8px;
+    text-align: center;
+  }
+  .h2 {
+    margin: 20px auto;
+    text-transform: uppercase;
+  }
+  .curriculum-profile {
+    width: 80%;
+    margin: 0 auto;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(180, 27, 27) 100%
+    );
+    padding: 10px;
+    font-family: "jura";
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+  .curriculum-profile img {
+    height: 50px;
+    width: 50px;
+  }
+  .name-profile {
+    text-align: start;
+  }
+  .name-profile h2 {
+    font-size: 15px;
+  }
+  .payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+  }
+  .payment p {
+    font-size: 10px;
+  }
+  .skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 9px;
+    text-align: center;
+    font-family: "lexend zetta";
+    height: 30px;
+    width: 80%;
+    margin: 8px auto;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(180, 27, 27) 100%
+    );
+  }
+  
+  .plan-container {
+    width: 100%;
+  }
+  .plan-container h2 {
+    color: #fff;
+    font-family: "lexend zetta";
+    font-size: 12px;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .plan-container p {
+    color: #515151;
+    font-family: "lexend zetta";
+    font-size: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .plan-box {
+    border-radius: 9px;
+    margin: 0 auto;
+    padding: 2px;
+    width: 90%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      184deg,
+      rgba(0, 0, 0, 0.018425460636515956) 0%,
+      rgba(30, 30, 30, 1) 100%
+    );
+  }
+  .plan-box:hover{
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      184deg,
+      rgba(0, 0, 0, 0.018425460636515956) 0%,
+      rgb(51, 51, 51) 100%
+    );
+  }
+  .plan-content {
+    background-color: transparent;
+    border: 0.2px solid #353434;
+    margin: 2px;
+  }
+  .plan-content h3 {
+    padding: 5px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: "jura";
+  }
+  .features {
+    letter-spacing: 5px;
+    color: #ffffff83;
+    font-family: "lexend zetta";
+    font-size: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .plan-box-mensal {
+    border-radius: 9px;
+    margin: 20px auto;
+    padding: 2px;
+    width: 90%;
+    background: rgb(0,0,0);
+    background: linear-gradient(184deg, rgba(0,0,0,0.018425460636515956) 0%, rgba(33,115,41,1) 100%);
+  }
+  .plan-box-mensal:hover{
+    background: rgb(0,0,0);
+    background: linear-gradient(184deg, rgba(0,0,0,0.018425460636515956) 0%, rgb(61, 168, 72) 100%);
+  }
+  .plan-content-mensal {
+    background-color: transparent;
+    border: 0.2px solid #217329;
+    margin: 2px;
+  }
+  .plan-content-mensal h3 {
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #217329;
+    font-weight: bold;
+    font-family: "jura";
+  }
+  .features-mensal {
+    letter-spacing: 5px;
+    color: #ffffff83;
+    font-family: "lexend zetta";
+    font-size: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .certificate{
+    width: 100%;
+  }
+  .certificate-container{
+    width: 80%;
+    margin: 30px auto;
+    color: #fff;
+    font-family: "lexend zetta";
+  }
+  .certificate-container h2{
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .certificate-container h3{
+    font-size: 8px;
+    text-align: center;
+    color: #515151;
+    margin-bottom: 20px;
+  }
+  .certificate-container img{
+    width: 100%;
+  }
+  .form{
+    width: 100%;
+  }
+  .form-container{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .form-container h2{
+    color: #fff;
+    font-family: "lexend zetta";
+    font-size: 12px;
+    text-align: center;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  form input{
+    width: 100%;
+    height: 38px;
+    background-color: #24242469;
+    border-radius: 4px;
+    border: none;
+    font-family: "lexend zetta";
+    font-size: 8px;
+    padding: 4px;
+    margin: 10px 0px;
+  }
+  form textarea{
+    resize: none;
+    width: 100%;
+    height: 100px;
+    background-color: #24242469;
+    border-radius: 4px;
+    border: none;
+    font-family: "lexend zetta";
+  }
+  form button{
+    transition: .4s;
+   align-self: self-end; 
+   width: 80px;
+   margin-top: 20px;
+   height: 30px;
+   font-family: "lexend zetta";
+   font-size: 8px;
+   color: #515151;
+   background-color: transparent;
+   border: none;
+   border-bottom: 2px solid #8F1F1F;
+  }
+  form button:hover{
+    border-bottom: 2px solid #ffffff;
+  }
+  footer{
+    width: 100%;
+  }
+  .footer-container{
+    width: 80%;
+    margin: 0 auto;
+    color: #fff;
+    font-family: "lexend zetta";
+    font-size: 8px;
+  }
+  .footer-container a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .logo{
+    width: 75px;
+  }
+  .links{
+    margin-top: 5px;
+  }
+  .social{
+    width: 14px;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    width: 100%;
+    background-color: #000;
+  }
+  header {
+    height: 52px;
+    width: 100%;
+  }
+  nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  nav img {
+    height: 19px;
+    width: 100px;
+  }
+  .submenu-container {
+    width: 100%;
+    height: 35px;
+  }
+  .submenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .submenu a {
+    text-transform: uppercase;
+    transition: 0.4s;
+    display: flex;
+    align-items: end;
+    font-size: 16px;
+    height: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Lexend Zetta";
+    border-bottom: 2px solid transparent;
+  }
+  .submenu a:hover {
+    border-bottom: 2px solid #8F1F1F;
+  }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 511px;
+    background-image: url("/images/banner.png");
+    background-size: cover;
+  }
+  .banner-container img {
+    width: 655px;
+  }
+  .banner-container h2 {
+    font-size: 32px;
+    text-align: start;
+    font-family: "jura";
+    color: #fff;
+  }
+  .trilhas-container {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .trilhas h2,
+  .trilhas p {
+    color: #fff;
+    text-align: center;
+  }
+  .trilhas h2 {
+    font-family: "Lexend Zetta";
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  .trilhas p {
+    font-family: "Jura";
+    font-size: 24px;
+    color: #d2d2d2;
+  }
+  .trilhas img {
+    width: 130px;
+  }
+  .trilhas {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+    .linguagens {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0px;
+  }
+  .linguagens img {
+    cursor: pointer;
+    transition: 0.4s;
+    filter: grayscale();
+  }
+  .linguagens img:hover {
+    filter: none;
+  }
+  .html-description,
+  .css-description,
+  .js-description {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .html-description {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 67, 0, 1) 100%
+    );
+  }
+  .css-description {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(13, 46, 119) 100%
+    );
+  }
+  .js-description {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(236, 195, 11) 100%
+    );
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .row h2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "jura";
+  }
+  .html-description li {
+    font-weight: bold;
+    font-size: 28px;
+    font-family: "jura";
+    list-style: none;
+    margin-left: 10px;
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 255, 255),
+      rgb(196, 115, 40),
+      rgb(243, 57, 0)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+  .css-description li {
+    font-weight: bold;
+    font-size: 28px;
+    font-family: "jura";
+    list-style: none;
+    margin-left: 10px;
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 255, 255),
+      rgb(32, 110, 212),
+      #0772ff
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+  .js-description li {
+    font-weight: bold;
+    font-size: 28px;
+    font-family: "jura";
+    list-style: none;
+    margin-left: 10px;
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0),
+      rgb(0, 0, 0),
+      #000000
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+  .sobre-contaiener {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .sobre img{
+    width: 445px;
+  }
+  .sobre {
+    padding-top: 10px;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .sobre p {
+    margin: 15px auto;
+    font-size: 32px;
+    font-family: "jura";
+    width: 100%;
+    color: #fff;
+  }
+  .sobre span {
+    background-image: linear-gradient(
+      to right,
+      rgb(146, 12, 12),
+      rgb(151, 60, 57),
+      #1e6c72
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+  .progress-container {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .progress {
+    font-size: 30px;
+    font-family: "jura";
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .progress span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #8f1f1f 100%);
+  }
+  .step {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  .progress-1 .step p {
+    text-align: start;
+  }
+  .progress-2 .step p {
+    text-align: end;
+  }
+  .curriculum-container {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .curriculum {
+    color: #fff;
+    font-family: "Lexend Zetta";
+    font-size: 20px;
+    text-align: center;
+  }
+  .h2 {
+    font-size: 25px;
+    margin: 20px auto;
+    text-transform: uppercase;
+  }
+  .curriculum-profile {
+    width: 80%;
+    margin: 0 auto;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(180, 27, 27) 100%
+    );
+    padding: 10px;
+    font-family: "jura";
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 155px;
+  }
+  .curriculum-profile img {
+    height: 135px;
+    width: 135px;
+  }
+  .name-profile {
+    text-align: start;
+  }
+  .name-profile h2 {
+    font-size: 24px;
+  }
+  .payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+  }
+  .payment p {
+    font-size: 24px;
+  }
+  .skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 24px;
+    text-align: center;
+    font-family: "lexend zetta";
+    height: 60px;
+    width: 80%;
+    margin: 8px auto;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(180, 27, 27) 100%
+    );
+  }
+  .plan-container {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .plan-section{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+  }
+  .plan-container h2 {
+    color: #fff;
+    font-family: "lexend zetta";
+    font-size: 24px;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .plan-container p {
+    color: #515151;
+    font-family: "lexend zetta";
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .plan-box {
+    height: 615px;
+    border-radius: 9px;
+    margin: 0 auto;
+    padding: 2px;
+    width: 360px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      184deg,
+      rgba(0, 0, 0, 0.018425460636515956) 0%,
+      rgba(30, 30, 30, 1) 100%
+    );
+  }
+  .plan-box:hover{
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      184deg,
+      rgba(0, 0, 0, 0.018425460636515956) 0%,
+      rgb(51, 51, 51) 100%
+    );
+  }
+  .plan-content {
+    height: 610px;
+    background-color: transparent;
+    border: 0.2px solid #353434;
+    margin: 2px;
+  }
+  .plan-content h3 {
+    margin-top: 20px;
+    font-size: 32px;
+    padding: 5px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: "jura";
+  }
+  .features {
+    letter-spacing: 5px;
+    color: #ffffff83;
+    font-family: "lexend zetta";
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+  }
+  .plan-box-mensal {
+    border-radius: 9px;
+    margin: 20px auto;
+    padding: 2px;
+    width: 360px;
+    height: 615px;
+    background: rgb(0,0,0);
+    background: linear-gradient(184deg, rgba(0,0,0,0.018425460636515956) 0%, rgba(33,115,41,1) 100%);
+  }
+  .plan-box-mensal:hover{
+    background: rgb(0,0,0);
+    background: linear-gradient(184deg, rgba(0,0,0,0.018425460636515956) 0%, rgb(61, 168, 72) 100%);
+  }
+  .plan-content-mensal {
+    height: 610px;
+    background-color: transparent;
+    border: 0.2px solid #217329;
+    margin: 2px;
+  }
+  .plan-content-mensal h3 {
+    font-weight: bold;
+    font-size: 32px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #217329;
+    font-weight: bold;
+    font-family: "jura";
+  }
+  .features-mensal {
+
+    font-size: 15px;
+    letter-spacing: 5px;
+    color: #ffffff83;
+    font-family: "lexend zetta";
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+  }
+  .certificate{
+    width: 100%;
+    margin-top: 50px;
+  }
+  .certificate-container{
+    width: 80%;
+    text-align: center;
+    margin: 30px auto;
+    color: #fff;
+    font-family: "lexend zetta";
+  }
+  .certificate-container h2{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .certificate-container h3{
+    font-size: 20px;
+    text-align: center;
+    color: #515151;
+    margin-bottom: 20px;
+  }
+  .certificate-container img{
+    width: 50%;
+  }
+  .form{
+    width: 100%;
+  }
+  .form-container{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .form-container h2{
+    text-align: start;
+    color: #fff;
+    font-family: "lexend zetta";
+    font-size: 16px;
+  }
+  form{
+   width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  form input{
+    width: 100%;
+    align-self: self-start;
+    height: 38px;
+    background-color: #24242469;
+    border-radius: 4px;
+    border: none;
+    font-family: "lexend zetta";
+    font-size: 10px;
+    padding: 4px;
+    margin: 10px 0px;
+  }
+  form textarea{
+    width: 100%;
+    align-self: self-start;
+    resize: none;
+    height: 100px;
+    background-color: #24242469;
+    border-radius: 4px;
+    border: none;
+    font-family: "lexend zetta";
+  }
+  form button{
+    transition: .4s;
+   align-self: self-end; 
+   width: 80px;
+   margin-top: 20px;
+   height: 30px;
+   font-family: "lexend zetta";
+   font-size: 8px;
+   color: #515151;
+   background-color: transparent;
+   border: none;
+   border-bottom: 2px solid #8F1F1F;
+  }
+  form button:hover{
+    border-bottom: 2px solid #ffffff;
+  }
+  footer{
+    width: 100%;
+  }
+  .footer-container{
+    width: 80%;
+    margin: 0 auto;
+    color: #fff;
+    font-family: "lexend zetta";
+    font-size: 12px;
+  }
+  .footer-container a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .logo{
+    width: 75px;
+  }
+  .links{
+    margin-top: 5px;
+  }
+  .social{
+    width: 14px;
+  }
+}
+
+/* @media (max-width:2560px){
+  body {
+    width: 100%;
+    background-color: #000;
+  }
+  header {
+    height: 52px;
+    width: 100%;
+  }
+  nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  nav img {
+    height: 19px;
+    width: 100px;
+  }
+  .submenu-container {
+    width: 100%;
+    height: 35px;
+  }
+  .submenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .submenu a {
+    text-transform: uppercase;
+    transition: 0.4s;
+    display: flex;
+    align-items: end;
+    font-size: 16px;
+    height: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Lexend Zetta";
+    border-bottom: 2px solid transparent;
+  }
+  .submenu a:hover {
+    border-bottom: 2px solid #8F1F1F;
+  }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 511px;
+    background-image: url("/images/banner.png");
+    background-size: cover;
+  }
+  .banner-container img {
+    width: 655px;
+  }
+  .banner-container h2 {
+    font-size: 32px;
+    text-align: start;
+    font-family: "jura";
+    color: #fff;
+  }
+  .trilhas-container {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .trilhas h2,
+  .trilhas p {
+    color: #fff;
+    text-align: center;
+  }
+  .trilhas h2 {
+    font-family: "Lexend Zetta";
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  .trilhas p {
+    font-family: "Jura";
+    font-size: 24px;
+    color: #d2d2d2;
+  }
+  .trilhas img {
+    width: 130px;
+  }
+  .trilhas {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+    .linguagens {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0px;
+  }
+  .linguagens img {
+    cursor: pointer;
+    transition: 0.4s;
+    filter: grayscale();
+  }
+  .linguagens img:hover {
+    filter: none;
+  }
+  .html-description,
+  .css-description,
+  .js-description {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .html-description {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 67, 0, 1) 100%
+    );
+  }
+  .css-description {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(13, 46, 119) 100%
+    );
+  }
+  .js-description {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(236, 195, 11) 100%
+    );
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .row h2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "jura";
+  }
+  .html-description li {
+    font-weight: bold;
+    font-size: 28px;
+    font-family: "jura";
+    list-style: none;
+    margin-left: 10px;
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 255, 255),
+      rgb(196, 115, 40),
+      rgb(243, 57, 0)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+  .css-description li {
+    font-weight: bold;
+    font-size: 28px;
+    font-family: "jura";
+    list-style: none;
+    margin-left: 10px;
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 255, 255),
+      rgb(32, 110, 212),
+      #0772ff
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+  .js-description li {
+    font-weight: bold;
+    font-size: 28px;
+    font-family: "jura";
+    list-style: none;
+    margin-left: 10px;
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0),
+      rgb(0, 0, 0),
+      #000000
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+  .sobre-contaiener {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .sobre img{
+    width: 445px;
+  }
+  .sobre {
+    padding-top: 10px;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .sobre p {
+    margin: 15px auto;
+    font-size: 32px;
+    font-family: "jura";
+    width: 100%;
+    color: #fff;
+  }
+  .sobre span {
+    background-image: linear-gradient(
+      to right,
+      rgb(146, 12, 12),
+      rgb(151, 60, 57),
+      #1e6c72
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+  }
+  .progress-container {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .progress {
+    font-size: 30px;
+    font-family: "jura";
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .progress span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #8f1f1f 100%);
+  }
+  .step {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  .progress-1 .step p {
+    text-align: start;
+  }
+  .progress-2 .step p {
+    text-align: end;
+  }
+  .curriculum-container {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .curriculum {
+    color: #fff;
+    font-family: "Lexend Zetta";
+    font-size: 20px;
+    text-align: center;
+  }
+  .h2 {
+    font-size: 25px;
+    margin: 20px auto;
+    text-transform: uppercase;
+  }
+  .curriculum-profile {
+    width: 80%;
+    margin: 0 auto;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(180, 27, 27) 100%
+    );
+    padding: 10px;
+    font-family: "jura";
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 155px;
+  }
+  .curriculum-profile img {
+    height: 135px;
+    width: 135px;
+  }
+  .name-profile {
+    text-align: start;
+  }
+  .name-profile h2 {
+    font-size: 24px;
+  }
+  .payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+  }
+  .payment p {
+    font-size: 24px;
+  }
+  .skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 24px;
+    text-align: center;
+    font-family: "lexend zetta";
+    height: 60px;
+    width: 80%;
+    margin: 8px auto;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(180, 27, 27) 100%
+    );
+  }
+  .plan-container {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .plan-section{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+  }
+  .plan-container h2 {
+    color: #fff;
+    font-family: "lexend zetta";
+    font-size: 24px;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .plan-container p {
+    color: #515151;
+    font-family: "lexend zetta";
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .plan-box {
+    height: 615px;
+    border-radius: 9px;
+    margin: 0 auto;
+    padding: 2px;
+    width: 360px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      184deg,
+      rgba(0, 0, 0, 0.018425460636515956) 0%,
+      rgba(30, 30, 30, 1) 100%
+    );
+  }
+  .plan-box:hover{
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      184deg,
+      rgba(0, 0, 0, 0.018425460636515956) 0%,
+      rgb(51, 51, 51) 100%
+    );
+  }
+  .plan-content {
+    height: 610px;
+    background-color: transparent;
+    border: 0.2px solid #353434;
+    margin: 2px;
+  }
+  .plan-content h3 {
+    margin-top: 20px;
+    font-size: 32px;
+    padding: 5px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: "jura";
+  }
+  .features {
+    letter-spacing: 5px;
+    color: #ffffff83;
+    font-family: "lexend zetta";
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+  }
+  .plan-box-mensal {
+    border-radius: 9px;
+    margin: 20px auto;
+    padding: 2px;
+    width: 360px;
+    height: 615px;
+    background: rgb(0,0,0);
+    background: linear-gradient(184deg, rgba(0,0,0,0.018425460636515956) 0%, rgba(33,115,41,1) 100%);
+  }
+  .plan-box-mensal:hover{
+    background: rgb(0,0,0);
+    background: linear-gradient(184deg, rgba(0,0,0,0.018425460636515956) 0%, rgb(61, 168, 72) 100%);
+  }
+  .plan-content-mensal {
+    height: 610px;
+    background-color: transparent;
+    border: 0.2px solid #217329;
+    margin: 2px;
+  }
+  .plan-content-mensal h3 {
+    font-weight: bold;
+    font-size: 32px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #217329;
+    font-weight: bold;
+    font-family: "jura";
+  }
+  .features-mensal {
+
+    font-size: 15px;
+    letter-spacing: 5px;
+    color: #ffffff83;
+    font-family: "lexend zetta";
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+  }
+  .certificate{
+    width: 100%;
+    margin-top: 50px;
+  }
+  .certificate-container{
+    width: 80%;
+    text-align: center;
+    margin: 30px auto;
+    color: #fff;
+    font-family: "lexend zetta";
+  }
+  .certificate-container h2{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .certificate-container h3{
+    font-size: 20px;
+    text-align: center;
+    color: #515151;
+    margin-bottom: 20px;
+  }
+  .certificate-container img{
+    width: 50%;
+  }
+  .form{
+    width: 100%;
+  }
+  .form-container{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .form-container h2{
+    text-align: start;
+    color: #fff;
+    font-family: "lexend zetta";
+    font-size: 16px;
+  }
+  form{
+   width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  form input{
+    width: 100%;
+    align-self: self-start;
+    height: 38px;
+    background-color: #24242469;
+    border-radius: 4px;
+    border: none;
+    font-family: "lexend zetta";
+    font-size: 10px;
+    padding: 4px;
+    margin: 10px 0px;
+  }
+  form textarea{
+    width: 100%;
+    align-self: self-start;
+    resize: none;
+    height: 100px;
+    background-color: #24242469;
+    border-radius: 4px;
+    border: none;
+    font-family: "lexend zetta";
+  }
+  form button{
+    transition: .4s;
+   align-self: self-end; 
+   width: 80px;
+   margin-top: 20px;
+   height: 30px;
+   font-family: "lexend zetta";
+   font-size: 8px;
+   color: #515151;
+   background-color: transparent;
+   border: none;
+   border-bottom: 2px solid #8F1F1F;
+  }
+  form button:hover{
+    border-bottom: 2px solid #ffffff;
+  }
+  footer{
+    width: 100%;
+  }
+  .footer-container{
+    width: 80%;
+    margin: 0 auto;
+    color: #fff;
+    font-family: "lexend zetta";
+    font-size: 12px;
+  }
+  .footer-container a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .logo{
+    width: 75px;
+  }
+  .links{
+    margin-top: 5px;
+  }
+  .social{
+    width: 14px;
+  }
+} */
